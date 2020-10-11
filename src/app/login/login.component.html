@@ -1,0 +1,39 @@
+<mat-tab-group
+  animationDuration="0ms"
+  (selectedTabChange)="_setActiveTab($event)"
+>
+  <mat-tab label="Sign up">
+    <div class="sign-up-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="_username" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="_email" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="_password" />
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="_onSubmit()">
+        SUBMIT
+      </button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Log in">
+    <div class="login-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="_email" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="_password" />
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="_onSubmit()">
+        SUBMIT
+      </button>
+    </div>
+  </mat-tab>
+</mat-tab-group>

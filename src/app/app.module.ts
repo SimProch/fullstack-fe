@@ -23,10 +23,10 @@ import { AuthInterceptor } from './auth/auth-interceptor.service';
     MatInputModule,
     MatTabsModule,
     MatButtonModule,
-    BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
   ],
   providers: [

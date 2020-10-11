@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod",
+    "start": "node --max-old-space-size=1024 node_modules/@angular/cli/bin/ng build --prod",
     "build": "ng build",
     "test": "ng test --watch=false",
     "lint": "ng lint --fix=true",

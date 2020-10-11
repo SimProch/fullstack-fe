@@ -7,11 +7,11 @@ version: 2.1
 orbs:
   snyk: snyk/snyk@0.0.8
   cypress: cypress-io/cypress@1
-  node: circleci/node@4.1.0
 jobs:
   build:
     docker:
-      - image: circleci/node:14.13.0
+      - image: circleci/node:10-browsers
+
     working_directory: ~/chat-fe-angular
 
     steps:

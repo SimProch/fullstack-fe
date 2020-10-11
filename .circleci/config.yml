@@ -26,5 +26,5 @@ jobs:
     
       # Run size checker
       - run:
-          name: "Build and set git"
-          command: "build"
+          name: "Build"
+          command: "npm run build"

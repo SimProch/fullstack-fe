@@ -1,7 +1,10 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TestBed, async } from "@angular/core/testing";
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatInputModule, MatTabsModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from "@angular/router/testing";

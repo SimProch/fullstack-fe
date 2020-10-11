@@ -7,17 +7,11 @@ version: 2.1
 orbs:
   snyk: snyk/snyk@0.0.8
   cypress: cypress-io/cypress@1
+  node: circleci/node@4.1.0
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:14.13.0
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/chat-fe-angular
 
     steps:

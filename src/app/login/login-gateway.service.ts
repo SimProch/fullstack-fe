@@ -1,38 +1,34 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import {
   LoginParameters,
   LoginResponse,
   SignInParameters,
   SignInResponse,
-} from "./login.types";
+} from './login.types';
 
-const API_PREFIX = environment.endpoint + "/auth";
+const API_PREFIX = environment.endpoint + '/auth';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class LoginGatewayService {
   constructor(private _httpClient: HttpClient) {}
 
   signIn(params: SignInParameters): Observable<SignInResponse> {
-    return this._httpClient.post<SignInResponse>(API_PREFIX + "/register", <
-      SignInParameters
-    >{
+    return this._httpClient.post<SignInResponse>(API_PREFIX + '/register', {
       email: params.email,
       name: params.name,
       password: params.password,
-    });
+    } as SignInParameters);
   }
 
   login(params: LoginParameters): Observable<LoginResponse> {
-    return this._httpClient.post<LoginResponse>(API_PREFIX + "/login", <
-      LoginParameters
-    >{
+    return this._httpClient.post<LoginResponse>(API_PREFIX + '/login', {
       email: params.email,
       password: params.password,
-    });
+    } as LoginParameters);
   }
 }

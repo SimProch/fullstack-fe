@@ -1,13 +1,13 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthorizationService {
   private _jwtToken: string;
-  $token: BehaviorSubject<string> = new BehaviorSubject<string>("");
+  $token: BehaviorSubject<string> = new BehaviorSubject<string>('');
   constructor() {}
 
   getToken(): string {
@@ -16,7 +16,7 @@ export class AuthorizationService {
 
   setToken(token: string): void {
     this._jwtToken = token;
-    localStorage["jwt"] = token;
+    localStorage.jwt = token;
     this.$token.next(token);
   }
 }
